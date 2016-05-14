@@ -1,5 +1,5 @@
 # gulp boilerplate
-Gulp boilerplate for my basic project.
+Gulp boilerplate for my basic project.  
 (Gulp Starter)
 
 
@@ -12,10 +12,10 @@ Gulp boilerplate for my basic project.
 ### Clone
 In the project directory
 
-  $ git clone git@github.com:42EG4M1/gulp-boilerplate.git
+    $ git clone git@github.com:42EG4M1/gulp-boilerplate.git
 
 ### Install npm packages
-  $ npm i
+    $ npm i
 
 ### Build
-  $ gulp
+    $ gulp
