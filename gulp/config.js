@@ -21,6 +21,13 @@ module.exports = {
   },
   
   
+  images: {
+    src: paths.srcDir + 'images/**/*.+(jpg|jpeg|png|gif|svg)',
+    dest: paths.dstDir + 'images/',
+    watch: paths.srcDir + 'images/**/*.+(jpg|jpeg|png|gif|svg)'
+  },
+  
+  
   default: {
     depends: ['watch']
   }
