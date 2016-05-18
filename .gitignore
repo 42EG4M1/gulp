@@ -1,4 +1,5 @@
 node_modules
 .sass-cache
-assets/dist
 dist
+
+.DS_Store

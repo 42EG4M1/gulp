@@ -1,35 +1,41 @@
-var paths = {
-  srcDir : './assets/src/',
-  dstDir : './assets/dist/'
+var dir = {
+  src  : './src/assets/',
+  dist : './dist/assets/'
 }
 
 
 module.exports = {
   
   
+  root: {
+    src  : './src/',
+    dist : './dist/'
+  },
+  
+  
   sass: {
-    src: paths.srcDir + 'sass/**/*.scss',
-    dest: paths.dstDir + 'css/',
-    watch: paths.srcDir + 'sass/**/*.scss'
+    src   : dir.src + 'sass/**/*.scss',
+    dest  : dir.dist + 'css/',
+    watch : dir.src + 'sass/**/*.scss'
   },
   
   
   js: {
-    src: paths.srcDir + 'js/*.js',
-    dest: paths.dstDir + 'js/',
-    watch: paths.srcDir + 'js/*.js'
+    src   : dir.src + 'js/*.js',
+    dest  : dir.dist + 'js/',
+    watch : dir.src + 'js/*.js'
   },
   
   
   images: {
-    src: paths.srcDir + 'images/**/*.+(jpg|jpeg|png|gif|svg)',
-    dest: paths.dstDir + 'images/',
-    watch: paths.srcDir + 'images/**/*.+(jpg|jpeg|png|gif|svg)'
+    src   : dir.src + 'images/**/*.+(jpg|jpeg|png|gif|svg)',
+    dest  : dir.dist + 'images/',
+    watch : dir.src + 'images/**/*.+(jpg|jpeg|png|gif|svg)'
   },
   
   
   default: {
-    depends: ['watch']
+    depends : ['watch']
   }
   
 
