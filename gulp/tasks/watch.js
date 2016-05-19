@@ -13,4 +13,7 @@ gulp.task('watch', function() {
   $.watch(config.images.watch, function(event) {
     gulp.start(['imagemin']);
   });
+  $.watch(config.copy.watch, function(event) {
+    gulp.start(['copy']);
+  });
 });

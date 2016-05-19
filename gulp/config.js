@@ -8,8 +8,8 @@ module.exports = {
   
   
   root: {
-    src  : './src/',
-    dist : './dist/'
+    src   : './src/',
+    dist  : './dist/'
   },
   
   
@@ -31,6 +31,13 @@ module.exports = {
     src   : dir.src + 'images/**/*.+(jpg|jpeg|png|gif|svg)',
     dest  : dir.dist + 'images/',
     watch : dir.src + 'images/**/*.+(jpg|jpeg|png|gif|svg)'
+  },
+  
+  
+  copy: {
+    src   : './src/*.html',
+    dist  : './dist/',
+    watch : './src/*.html'
   },
   
   
