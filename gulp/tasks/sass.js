@@ -8,10 +8,8 @@ gulp.task('sass', function () {
     .pipe($.plumber())
     .pipe($.sass())
     .pipe($.pleeease({
-        /*autoprefixer: {
-            browsers: ['last 2 versions']
-        },*/
-        minifier: true//true or false
+      minifier: true, //true or false
+      out: 'all.min.css'
     }))
     .pipe(gulp.dest(config.dest));
 });
