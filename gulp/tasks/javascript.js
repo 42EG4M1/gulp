@@ -1,9 +1,9 @@
-var gulp   = require('gulp');
-var config = require('../config').js;
-var $      = require('gulp-load-plugins')();
+const gulp   = require('gulp');
+const config = require('../config').js;
+const $      = require('gulp-load-plugins')();
 
 
-gulp.task('js', ['uglify'], function() {
+gulp.task('js', ['uglify'], () => {
   return gulp.src([
     'node_modules/jquery/dist/jquery.min.js',
     config.dest + 'app.min.js'
@@ -12,7 +12,7 @@ gulp.task('js', ['uglify'], function() {
     .pipe(gulp.dest(config.dest));
 });
 
-gulp.task('uglify', function() {
+gulp.task('uglify', () => {
   return gulp.src(config.src)
     .pipe($.plumber())
     .pipe($.uglify())

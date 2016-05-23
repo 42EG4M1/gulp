@@ -1,9 +1,9 @@
-var gulp   = require('gulp');
-var config = require('../config');
-var $      = require('gulp-load-plugins')();
+const gulp   = require('gulp');
+const config = require('../config');
+const $      = require('gulp-load-plugins')();
 
 
-gulp.task('watch', function() {
+gulp.task('watch', () => {
   $.watch(config.sass.watch, function(event) {
     gulp.start(['sass']);
   });

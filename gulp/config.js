@@ -1,4 +1,4 @@
-var dir = {
+const dir = {
   src  : './src/assets/',
   dist : './dist/assets/'
 }
@@ -14,30 +14,30 @@ module.exports = {
   
   
   sass: {
-    src   : dir.src + 'sass/**/*.scss',
-    dest  : dir.dist + 'css/',
-    watch : dir.src + 'sass/**/*.scss'
+    src   : `${dir.src}sass/**/*.scss`,
+    dest  : `${dir.dist}css/`,
+    watch : `${dir.src}sass/**/*.scss`
   },
   
   
   js: {
-    src   : dir.src + 'js/*.js',
-    dest  : dir.dist + 'js/',
-    watch : dir.src + 'js/*.js'
+    src   : `${dir.src}js/*.js`,
+    dest  : `${dir.dist}js/`,
+    watch : `${dir.src}js/*.js`
   },
   
   
   images: {
-    src   : dir.src + 'images/**/*.+(jpg|jpeg|png|gif|svg)',
-    dest  : dir.dist + 'images/',
-    watch : dir.src + 'images/**/*.+(jpg|jpeg|png|gif|svg)'
+    src   : `${dir.src}images/**/*.+(jpg|jpeg|png|gif|svg)`,
+    dest  : `${dir.dist}images/`,
+    watch : `${dir.src}images/**/*.+(jpg|jpeg|png|gif|svg)`
   },
   
   
   copy: {
-    src   : './src/*.html',
+    src   : './src/*.+(html|php)',
     dist  : './dist/',
-    watch : './src/*.html'
+    watch : './src/*.+(html|php)'
   },
   
   

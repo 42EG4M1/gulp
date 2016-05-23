@@ -1,8 +1,8 @@
-var gulp   = require('gulp');
-var config = require('../config').copy;
+const gulp   = require('gulp');
+const config = require('../config').copy;
 
 
-gulp.task('copy', function() {
+gulp.task('copy', () => {
   return gulp.src(config.src)
   .pipe(gulp.dest(config.dist));
 });

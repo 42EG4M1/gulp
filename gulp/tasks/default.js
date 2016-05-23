@@ -1,5 +1,5 @@
-var gulp   = require('gulp');
-var config = require('../config').default;
+const gulp   = require('gulp');
+const config = require('../config').default;
 
 
 gulp.task('default', config.depends);

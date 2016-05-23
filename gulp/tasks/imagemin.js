@@ -1,9 +1,9 @@
-var gulp   = require('gulp');
-var config = require('../config').images;
-var $      = require('gulp-load-plugins')();
+const gulp   = require('gulp');
+const config = require('../config').images;
+const $      = require('gulp-load-plugins')();
 
 
-gulp.task('imagemin', function() {
+gulp.task('imagemin', () => {
   var imageminOptions = {
     optimizationLevel: 7,
     progressive: true,

@@ -1,9 +1,9 @@
-var gulp   = require('gulp');
-var config = require('../config').sass;
-var $      = require('gulp-load-plugins')();
+const gulp   = require('gulp');
+const config = require('../config').sass;
+const $      = require('gulp-load-plugins')();
 
 
-gulp.task('sass', function () {
+gulp.task('sass', () => {
   return gulp.src(config.src)
     .pipe($.plumber())
     .pipe($.sass())
