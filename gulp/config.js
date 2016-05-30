@@ -1,6 +1,6 @@
 const dir = {
   src  : './src/assets/',
-  dist : './dist/assets/'
+  dest : './dist/assets/'
 }
 
 
@@ -9,41 +9,40 @@ module.exports = {
   
   root: {
     src   : './src/',
-    dist  : './dist/'
+    dest  : './dist/'
   },
   
   
   sass: {
-    src   : `${dir.src}sass/**/*.scss`,
-    dest  : `${dir.dist}css/`,
-    watch : `${dir.src}sass/**/*.scss`
+    src   : `${dir.src}styles/**/*.scss`,
+    dest  : `${dir.dest}styles/`,
+    watch : `${dir.src}styles/**/*.scss`
   },
   
   
   js: {
-    src   : `${dir.src}js/*.js`,
-    dest  : `${dir.dist}js/`,
-    watch : `${dir.src}js/*.js`
+    src   : `${dir.src}scripts/*.js`,
+    dest  : `${dir.dest}scripts/`,
+    watch : `${dir.src}scripts/*.js`
   },
   
   
   images: {
     src   : `${dir.src}images/**/*.+(jpg|jpeg|png|gif|svg)`,
-    dest  : `${dir.dist}images/`,
+    dest  : `${dir.dest}images/`,
     watch : `${dir.src}images/**/*.+(jpg|jpeg|png|gif|svg)`
   },
   
   
   copy: {
     src   : './src/*.+(html|php)',
-    dist  : './dist/',
+    dest  : './dist/',
     watch : './src/*.+(html|php)'
-  },
-  
-  
-  default: {
-    depends : ['watch']
   }
   
+  
+//  default: {
+//    depends : ['watch']
+//  }
 
 };
