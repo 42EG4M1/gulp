@@ -1,0 +1,263 @@
+// pager
+
+
+
+
+
+.p-pagination {
+  margin-top: 0;
+  margin-bottom: $margin-main;
+  &__inner {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    a:not(.next):not(.prev) {
+      position: relative;
+      display: block;
+      transition: $transition-base;
+      overflow: hidden;
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: calc(50% - 10px);
+        width: 0;
+        height: 1px;
+        background: $color-line;
+        transition: width .3s ease;
+      }
+      &:hover:before {
+        right: auto;
+        left: calc(50% - 10px);
+        width: 20px;
+      }
+    }
+  }
+}
+
+.page-numbers {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 10px;
+  text-align: center;
+  &.prev,
+  &.next {
+    position: relative;
+    width: auto;
+    padding: 0 20px;
+    transition: $transition-base;
+    &:before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      border: 1px solid $color-line;
+      transform: rotate(45deg);
+      transition: all .2s ease;
+      @include vertical-center;
+    }
+  }
+  &.prev {
+    margin-left: 0;
+    &:before {
+      left: 3px;
+      border-top: none;
+      border-right: none;
+    }
+    &:hover:before {
+      left: 0;
+    }
+  }
+  &.next {
+    margin-right: 0;
+    &:before {
+      right: 3px;
+      border-left: none;
+      border-bottom: none;
+    }
+    &:hover:before {
+      right: 0;
+    }
+  }
+  &.current {
+    position: relative;
+    font-weight: bold;
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 10px);
+      width: 20px;
+      height: 1px;
+      background: $color-line;
+    }
+  }
+}
+
+
+
+
+// media query
+@media #{$mq768} {
+.p-pagination {
+  margin-bottom: $margin-main-tab;
+}
+.page-numbers {
+  margin: 0;
+  &.prev {
+    padding: 0 10px 0 15px;
+  }
+  &.next {
+    padding: 0 15px 0 10px;
+  }
+}
+}
+
+
+
+
+// article
+.p-pagination--article {
+  box-sizing: border-box;
+  max-width: $width-article;
+  padding: 0 280px;
+  margin-top: 40px;
+  margin-bottom: $margin-main;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__prev,
+  &__next {
+    position: relative;
+    width: 50%;
+    a {
+      display: block;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      transition: $transition-base;
+      &:before {
+        content: "";
+        width: 5px;
+        height: 5px;
+        border: 1px solid $color-line;
+        transform: rotate(45deg);
+        transition: all .2s ease;
+        @include vertical-center;
+      }
+    }
+  }
+  &__prev {
+    a {
+      &:before {
+        left: 3px;
+        border-top: none;
+        border-right: none;
+      }
+      &:hover:before {
+        left: 0;
+      }
+    }
+  }
+  &__next {
+    margin-left: 50%;
+    text-align: right;
+    a {
+      &:before {
+        right: 3px;
+        border-left: none;
+        border-bottom: none;
+      }
+      &:hover:before {
+        right: 0;
+      }
+    }
+  }
+  &__prev + &__next {
+    margin-left: 0;
+  }
+}
+
+
+
+
+// media query
+@media #{$mq1280} {
+.p-pagination--article {
+  max-width: 900px;
+  margin-bottom: $margin-main-tab;
+  padding: 0;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

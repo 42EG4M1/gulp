@@ -1,0 +1,76 @@
+// ads
+
+
+
+
+
+.p-ads {
+  &__inner {
+    width: 100%;
+    max-width: 728px;
+    height: 90px;//本番では100%にする
+    margin: 0 auto;
+    p {
+      height: 100%;
+      text-align: center;
+      background: #fff;
+    }
+  }
+  &--article {
+    width: 100%;
+    margin-top: 40px;
+    background: $color-background-body;
+    &__inner {
+      width: 100%;
+      max-width: 728px;
+      height: 90px;//本番では100％にする
+      margin: 0 auto;
+      p {
+        height: 100%;
+        text-align: center;
+        background: #fff;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

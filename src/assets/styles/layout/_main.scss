@@ -1,0 +1,93 @@
+// main
+
+
+
+
+
+.main {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 100px;
+  background: $color-background-body;
+  &__inner {
+    width: 100%;
+    max-width: $width-max;
+    height: 100%;
+    margin: $margin-main auto 0;
+    .p-breadcrumbs + & {
+      margin: 10px auto 0;
+    }
+  }
+}
+
+
+
+
+// media query
+@media #{$mq1440} {
+.main {
+  padding: 0 80px;
+}
+}
+
+@media #{$mq768} {
+.main {
+  padding: 0 30px;
+  &__inner {
+    margin: $margin-main-tab auto 0;
+  }
+}
+}
+
+@media #{$mq400} {
+.main {
+  padding: 0 20px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

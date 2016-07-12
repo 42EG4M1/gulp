@@ -1,0 +1,129 @@
+// search
+
+
+
+
+
+.p-search {
+  position: relative;
+  &__inner {
+  }
+  &__submit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 0;
+    height: 40px;
+    vertical-align: top;
+    padding: 0 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: none;
+    background: none;
+    transition: width .5s ease, background-color .5s ease;
+    z-index: 2;
+  }
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    transition: all .3s ease;
+    z-index: 3;
+  }
+  &:hover &__inner &__submit,
+  &__submit:focus {
+    width: 240px;
+    background: #fff;
+  }
+  &:hover &__icon,
+  &__submit:focus + &__icon {
+    position: absolute;
+    left: 240px;
+    z-index: 1;
+  }
+}
+
+
+
+
+
+// media query
+@media #{$mq400} {
+.p-search {
+  &:hover &__inner &__submit,
+  &__submit:focus {
+    width: 150px;
+    .is-fixed & {
+      background: #eee;
+    }
+  }
+  &:hover &__icon,
+  &__submit:focus + &__icon {
+    left: 150px;
+  }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

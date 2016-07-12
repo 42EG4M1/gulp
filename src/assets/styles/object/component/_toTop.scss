@@ -1,0 +1,107 @@
+// to top
+
+
+
+
+
+.c-toTop {
+  position: fixed;
+  bottom: 80px;
+  right: 80px;
+  transition: $transition-base;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 2;
+  a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: $color-accent;
+    transition: $transition-base;
+    .c-icon.arrowUp {
+      fill: #fff;
+      height: 8px;
+    }
+    &:hover {
+      background: $color-block-hover;
+    }
+  }
+}
+
+.is-active ~ .c-toTop {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+// media query
+@media #{$mq768} {
+.c-toTop {
+  bottom: 30px;
+  right: 30px;
+}
+}
+
+@media #{$mq400} {
+.c-toTop {
+  bottom: 0;
+  right: 10px;
+  a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background: $color-background-main;
+    .c-icon.arrowUp {
+      fill: $color-line;
+    }
+    &:hover {
+      background: $color-background-main;
+    }
+  }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

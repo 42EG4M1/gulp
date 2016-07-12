@@ -1,0 +1,104 @@
+// profile
+
+
+
+
+
+$img-size: 300px;
+
+.p-profile {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: $img-size;
+    padding-left: calc(#{$img-size} + 30px);
+    background: url(../images/me.png) left top no-repeat;
+    background-size: contain;
+  }
+  &__name {
+    position: relative;
+    font-size: 18px;
+    font-family: $font-family-lato;
+    font-weight: 400;
+    letter-spacing: 3px;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -60px;
+      width: 50px;
+      height: 1px;
+      background: $color-line;
+    }
+  }
+  &__text {
+    font-size: 11px;
+    font-family: $font-family-lato;
+    letter-spacing: 2px;
+  }
+  &__lists {
+    margin-top: 16px;
+    li {
+      margin-top: 2px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      a {
+        transition: $transition-base;
+      }
+    }
+  }
+}
+
+
+
+
+// media query
+@media #{$mq700} {
+.p-profile {
+  &__inner {
+    max-width: 800px;
+    padding-left: 0;
+    &:before {
+      content: "";
+      display: block;
+      padding-top: calc(100% + 20px);
+    }
+  }
+  &__name {
+    font-size: 16px;
+    &:before {
+      display: none;
+    }
+  }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

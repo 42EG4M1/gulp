@@ -1,0 +1,307 @@
+// post
+
+
+
+
+
+$post-width: 18.75%;// 1920px - 30px * 4 / 5 / 1920px * 100
+$post-margin-left: 1.5625%;// 30px / 1920px * 100
+
+.p-card {
+  &__hold {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+//    display: flex; 最下部のflexitemを揃える場合
+    width: $post-width;
+    margin: 0 0 $margin-main $post-margin-left;
+    &:nth-of-type(n+1):not(:nth-of-type(n+21)) {
+      order: 1;
+    }
+    &:nth-of-type(n+21):not(:nth-of-type(n+41)) {
+      order: 3;
+    }
+    &:nth-of-type(n+41):not(:nth-of-type(n+61)) {
+      order: 5;
+    }
+    &:nth-of-type(n+61) {
+      order: 7;
+    }
+    &:nth-of-type(5n+1) {
+      margin-left: 0;
+    }
+    &--no1,
+    &--no2,
+    &--no3 {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: $margin-main;
+    }
+    &--no1 {
+      order: 2;
+    }
+    &--no2 {
+      order: 4;
+    }
+    &--no3 {
+      order: 6;
+    }
+    &--none {
+      width: 100%;
+      margin-bottom: $margin-main;
+      color: $color-accent-2;
+      font-weight: bold;
+    }
+  }
+  &__inner {
+//    flex: 1 1 100%; 最下部のflexitemを揃える場合
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  &__ttl {
+    order: 2;
+    width: 100%;
+    margin-top: 16px;
+//    margin: 16px 0; 最下部のflexitemを揃える場合
+    font-size: 13px;
+    a {
+      color: $color-text-main;
+      transition: $transition-base;
+      &:hover {
+        color: $color-hover;
+      }
+    }
+  }
+  &__thumb {
+    position: relative;
+    order: 1;
+    width: 100%;
+    overflow: hidden;
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 75%;
+    }
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($color-accent,.6);
+        transition: $transition-base;
+        visibility: hidden;
+        opacity: 0;
+      }
+      &:hover:before {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+  &__meta {
+    order: 3;
+    margin-top: 16px;
+//    margin-top: auto; 最下部のflexitemを揃える場合
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__date {
+    font-family: $font-family-lato;
+    font-size: 10px;
+    letter-spacing: 1px;
+    span {
+      margin-right: 5px;
+      font-weight: 700;
+      color: $color-accent-2;
+    }
+  }
+  &__like {
+    font-size: 10px;
+    color: #ccc;
+    cursor: pointer;
+    .c-icon.heart {
+      height: 11px;
+      fill: #ccc;
+      transform: translateY(-1px);
+    }
+    &:hover .c-icon.heart {
+      fill: $color-accent-2;
+    }
+  }
+  &__taxonomy {
+    order: 4;
+    margin-top: 3px;
+    padding-top: 3px;
+    font-size: 11px;
+    border-top: 1px solid lighten($color-line, 40%);
+    a {
+      transition: $transition-base;
+    }
+    span {
+      position: relative;
+      display: inline-block;
+      margin-right: 20px;
+      &:not(:last-child):after {
+        content: "/";
+        position: absolute;
+        top: 0;
+        right: -12px;
+        font-family: $font-family-lato;
+        color: $color-text-main;
+      }
+    }
+  }
+}
+
+
+
+
+
+// media query
+@media #{$mq1920} {
+.p-card {
+  &__item {
+    width: 23.828125%;
+    &:nth-of-type(5n+1) {
+      margin-left: $post-margin-left;
+    }
+    &:nth-of-type(4n+1) {
+      margin-left: 0;
+    }
+  }
+}
+}
+
+@media #{$mq1280} {
+.p-card {
+  &__item {
+    width: 48.828125%;
+    margin: 0 0 $margin-main 2.34375%;
+    &:nth-of-type(5n+1) {
+      margin-left: 2.34375%;
+    }
+    &:nth-of-type(4n+1) {
+      margin-left: 2.34375%;
+    }
+    &:nth-of-type(2n+1) {
+      margin-left: 0;
+    }
+  }
+}
+}
+
+@media #{$mq768} {
+.p-card {
+  &__item {
+    width: 48.046875%;
+    margin: 0 0 $margin-main-tab 3.90625%;
+    &:nth-of-type(5n+1) {
+      margin-left: 3.90625%;
+    }
+    &:nth-of-type(4n+1) {
+      margin-left: 3.90625%;
+    }
+    &:nth-of-type(2n+1) {
+      margin-left: 0;
+    }
+    &--no1,
+    &--no2,
+    &--no3 {
+      margin-bottom: $margin-main-tab;
+    }
+  }
+  &__ttl {
+    margin-top: 10px;
+    font-size: 11px;
+  }
+  &__meta {
+    margin-top: 5px;
+  }
+}
+}
+
+@media #{$mq400} {
+.p-card {
+  &__item {
+    width: 48%;
+    margin: 0 0 $margin-main-tab 4%;
+    &:nth-of-type(5n+1) {
+      margin-left: 4%;
+    }
+    &:nth-of-type(4n+1) {
+      margin-left: 4%;
+    }
+    &:nth-of-type(2n+1) {
+      margin-left: 0;
+    }
+  }
+  &__ttl {
+    @include ellipsis;
+  }
+  &__like {
+    display: none;
+  }
+  &__taxonomy {
+    display: none;
+  }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
