@@ -4,7 +4,7 @@
   "description": "Gulp boilerplate for my basic project. (Gulp Starter)",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulp": "gulp"
   },
   "homepage": "",
   "repository": {
