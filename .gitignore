@@ -3,4 +3,5 @@ node_modules
 dist
 _dump
 
+*.log
 .DS_Store
