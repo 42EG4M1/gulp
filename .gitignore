@@ -1,7 +1,8 @@
 node_modules
 .sass-cache
-dist
-_dump
-
 *.log
 .DS_Store
+
+dist
+_dump
+src/inc/_*
