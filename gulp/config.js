@@ -34,15 +34,18 @@ module.exports = {
   },
 
 
+  svg: {
+    src  : `${dir.src}svgs/*.svg`,
+    dest : `${dir.dest}images/svg/`,
+    html : `${dir.src}svgs/_template.html`
+  },
+
+
   copy: {
     src   : ['./src/*.+(html|php|css|png)', './src/inc/*.+(html|php)'],
     dest  : './dist/',
     watch : ['./src/*.+(html|php|css|png)', './src/inc/*.+(html|php)']
   }
 
-
-//  default: {
-//    depends : ['watch']
-//  }
 
 };

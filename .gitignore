@@ -6,3 +6,4 @@ node_modules
 dist
 _dump
 src/inc/_*
+_sample.html

@@ -16,3 +16,6 @@ Gulp boilerplate for my basic project.
 
 ### Build
     $ npm run gulp
+
+#### SVG sprite
+    $ npm run svg
