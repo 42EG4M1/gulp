@@ -4,8 +4,8 @@
   "description": "Gulp boilerplate for my basic project. (Gulp Starter)",
   "main": "gulpfile.js",
   "scripts": {
-    "gulp": "gulp",
-    "svg" : "gulp svg"
+    "start": "gulp",
+    "svg"  : "gulp svg"
   },
   "homepage": "",
   "repository": {
