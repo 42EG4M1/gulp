@@ -2,7 +2,6 @@ const gulp   = require('gulp');
 const config = require('../config.js').svg;
 const $      = require('gulp-load-plugins')();
 
-
 gulp.task('svg', () => {
   gulp.src(config.src)
   .pipe($.svgmin())

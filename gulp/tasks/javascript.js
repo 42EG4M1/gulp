@@ -5,7 +5,6 @@ const source     = require('vinyl-source-stream');
 const buffer     = require('vinyl-buffer');
 const $          = require('gulp-load-plugins')();
 
-
 // gulp.task('js', ['uglify'], () => {
 //   return gulp.src([
 //     'node_modules/jquery/dist/jquery.min.js',

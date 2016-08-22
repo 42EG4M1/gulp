@@ -1,7 +1,6 @@
 const gulp   = require('gulp');
-const config = require('../config').images;
+const config = require('../config').image;
 const $      = require('gulp-load-plugins')();
-
 
 gulp.task('imagemin', () => {
   var imageminOptions = {
@@ -11,8 +10,8 @@ gulp.task('imagemin', () => {
     svgoPlugins: [{removeViewBox: false}]
   };
   return gulp.src(config.src)
-    .pipe($.changed(config.dest))
-    .pipe($.plumber())
-    .pipe($.imagemin(imageminOptions))
-    .pipe(gulp.dest(config.dest));
+  .pipe($.changed(config.dest))
+  .pipe($.plumber())
+  .pipe($.imagemin(imageminOptions))
+  .pipe(gulp.dest(config.dest));
 });
