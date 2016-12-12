@@ -1,9 +1,10 @@
-const gulp       = require('gulp');
-const config     = require('../config').js;
-const browserify = require('browserify');
-const source     = require('vinyl-source-stream');
-const buffer     = require('vinyl-buffer');
-const $          = require('gulp-load-plugins')();
+const gulp        = require('gulp');
+const config      = require('../config').js;
+const browserSync = require('browser-sync');
+const browserify  = require('browserify');
+const source      = require('vinyl-source-stream');
+const buffer      = require('vinyl-buffer');
+const $           = require('gulp-load-plugins')();
 
 // gulp.task('js', ['uglify'], () => {
 //   return gulp.src([
@@ -34,5 +35,9 @@ gulp.task('js', () => {
   .pipe($.uglify({
     preserveComments: 'license'
   }))
-  .pipe(gulp.dest(config.dest));
+  .pipe(gulp.dest(config.dest))
+  .pipe(browserSync.reload({
+    stream: true,
+    once: true
+  }));
 });
