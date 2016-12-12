@@ -30,7 +30,7 @@ gulp.task('js', () => {
     entries: [config.src]
   });
   return b.bundle()
-  .pipe(source('app.min.js'))
+  .pipe(source('bundle.min.js'))
   .pipe(buffer())
   .pipe($.uglify({
     preserveComments: 'license'

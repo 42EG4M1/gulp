@@ -1,11 +1,11 @@
 "use strict";
 
+// require
 var $ = require('jquery');
-//var foo = require('./modules/foo');
+var InsertSpan = require('./modules/insertspan');
 
 
-//  console.log(foo);
-
+// svg icon
 $(function() {
   $.ajax({
     type: 'get',
@@ -15,3 +15,12 @@ $(function() {
     $('body').prepend(svg);
   });
 });
+
+
+// target
+var testId = document.getElementById('js-testId'); // InsertSpan
+
+
+// instans
+var insertSpan = new InsertSpan(testId);
+
