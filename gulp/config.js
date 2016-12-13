@@ -34,6 +34,14 @@ module.exports = {
     html : `${dir.src}svgs/_template.html`
   },
 
+  favicon: {
+    src        : `${dir.src}favicon/master_picture.png`,
+    dest       : `${dir.dest}images/favicons/`,
+    iconPath   : './assets/images/favicons/',
+    srcFire    : './src/'
+//    markupFire : './dist/'
+  },
+
   copy: {
     src   : ['./src/*.+(html|php|css|png)', './src/inc/*.+(html|php)'],
     dest  : './dist/',

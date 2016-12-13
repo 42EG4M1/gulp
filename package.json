@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "gulp": "gulp",
-    "svg"  : "gulp svg"
+    "svg": "gulp svg",
+    "favicon": "gulp favicon"
   },
   "homepage": "",
   "repository": {
@@ -24,6 +25,7 @@
     "gulp-load-plugins": "^1.4.0",
     "gulp-pleeease": "^2.0.2",
     "gulp-plumber": "^1.1.0",
+    "gulp-real-favicon": "^0.2.2",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-svgmin": "^1.2.3",

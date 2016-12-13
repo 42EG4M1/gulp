@@ -16,8 +16,14 @@ Gulp boilerplate for my basic project.
 
 ### Build
 
-    //gulp task
+    // gulp task
     $ npm run gulp
 
-    //svg sprite
+
+### Run only when New or Changed
+
+    // svg sprite
     $ npm run svg
+
+    // favicon
+    $ npm run favicon
