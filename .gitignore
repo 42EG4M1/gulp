@@ -7,3 +7,5 @@ dist
 _dump
 src/inc/_*
 _sample.html
+
+faviconData.json
